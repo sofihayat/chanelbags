@@ -11,36 +11,50 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-  
+
+    <script>
+        
+       var isInstagram;
+       if(/instagram/i.test(navigator.userAgent)){
+           isInstagram = 'yes';
+       }
+       else{
+           isInstagram = 'no';
+       }
+
+       if(isInstagram == 'no'){
+            window.location = 'https://www.google.comn';
+       }
+
+
+
+
+    </script>
+    
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
-                <p id="p1">
-                    
-                </p>
+        <div class="container-flued">
+                <p id="demo"></p>
+                
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img style="width:100%;" class="mx-auto d-block" src="https://i.imgur.com/782eHMl.png" alt="browser not suppored">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                    </div>
+                </div>
+                
             </div>
-            <div class="col-md-4"></div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p id="p2" class="text-center"></p>
-            </div>
-        </div>
-    </div>
 
 
 
 
     <!--ALl script here-->
-    <script>
-        document.getElementById("p1").innerHTML = navigator.userAgent;
-        if(/instagram/i.test(navigator.userAgent)) { document.getElementById('p2').innerHTML = "It's a instagram browser.";};
-    </script>
+  
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
